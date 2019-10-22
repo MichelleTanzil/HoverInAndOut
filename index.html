@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover In And Out</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        $(document).ready(function(){
+            $('img').hover(function(){
+                $(this).attr("src", "ninja_cat.png");
+                $(this).attr("data-alt-src", "cat.png");
+                $(this).attr("alt", "ninja cat");
+                $(this).attr("alt-src", "cat");
+            }, function(){
+                $(this).attr("src", "cat.png");
+                $(this).attr("data-alt-src", "ninja_cat.png");
+                $(this).attr("alt", "cat");
+                $(this).attr("alt-src", "ninja cat");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">
+        <img src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">
+        <img src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">
+        <img class="cat" src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">
+    </div>
+    <div class="container">
+        <img src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">
+        <img src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">     
+        <img src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">
+        <img src="cat.png" alt="cat image" data-alt-src="ninja_cat.png" alt-src="ninja cat">
+    </div>
+</body>
+</html>
